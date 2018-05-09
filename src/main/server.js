@@ -9,6 +9,7 @@ import {
     health,
     dank,
     cage,
+    custom,
 } from './routes';
 
 const router = new Router();
@@ -23,6 +24,7 @@ const init = async (): Promise<void> => {
     router.get('/healthcheck', health);
     router.get('/dank.gif', dank);
     router.get('/nick-cage.gif', cage);
+    router.get('/:custom.gif', custom);
     const app = new Koa();
     app.use(koaBunyanLogger());
     app.use(koaBunyanLogger.requestIdContext());

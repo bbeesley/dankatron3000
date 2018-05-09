@@ -28,3 +28,9 @@ export const cage = async (ctx: Context) => {
     ctx.body = data;
     ctx.set('Content-Type', 'image/gif');
 };
+
+export const custom = async (ctx: Context) => {
+    const data = await random(ctx, ctx.params.custom);
+    ctx.body = data;
+    ctx.set('Content-Type', 'image/gif');
+};
