@@ -22,3 +22,9 @@ export const dank = async (ctx: Context) => {
     ctx.body = data;
     ctx.set('Content-Type', 'image/gif');
 };
+
+export const cage = async (ctx: Context) => {
+    const data = await random(ctx, 'nick+cage');
+    ctx.body = data;
+    ctx.set('Content-Type', 'image/gif');
+};
