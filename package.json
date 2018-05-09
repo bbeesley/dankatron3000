@@ -22,7 +22,7 @@
     "flow:generate": "flow-copy-source -v ./src/main ./dist/main",
     "pretest": "yarn flow:delete && run-p clean lint flow",
     "posttest": "yarn compile && yarn flow:generate",
-    "test": "BABEL_ENV=test yarn mocha"
+    "test": "echo test"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
