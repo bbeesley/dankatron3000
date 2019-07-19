@@ -1,0 +1,22 @@
+service:
+    name: dankatron
+
+provider:
+  name: cloudflare
+  config:
+    accountId: ${env:CLOUDFLARE_ACCOUNT_ID}
+    zoneId: ${env:CLOUDFLARE_ZONE_ID}
+
+plugins:
+  - serverless-cloudflare-workers
+
+functions:
+  gifme:
+    name: gifme
+    script: src/main/worker
+    environment:
+      GIPHY_API_KEY: ${env:GIPHY_API_KEY}
+    events:
+      - http:
+          url: hypntz.com/g/*
+          method: GET
