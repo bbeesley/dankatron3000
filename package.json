@@ -21,7 +21,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2",
-    "serverless": "^2.52.1",
+    "serverless": "^3.25.1",
     "serverless-cloudflare-workers": "^1.2.0"
   }
 }
